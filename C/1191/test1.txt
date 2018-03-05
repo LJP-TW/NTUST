@@ -1,0 +1,17 @@
+Training data:
+Default value: 10
+ATK=5, QQ=4, lol
+QQ=8, ATK=10, wow
+QQ=6, ATK=2, wow
+ATK=3, QQ=11, lol
+Test data: K=3
+QQ=2, ATK=7
+Training data:
+Default value: 5
+ATK=8, QQ=5, qoo
+QQ=3, ATK=6, yeee
+QQ=6, ATK=3, yeee
+ATK=9, QQ=5, qoo
+Test data: K=3
+QQ=3, ATK=6
+QQ=4
