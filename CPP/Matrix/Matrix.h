@@ -6,6 +6,12 @@
 
 using namespace std;
 
+struct matrixSize
+{
+	int m;
+	int n;
+};
+
 class Matrix
 {
 public:
@@ -17,9 +23,9 @@ public:
 
 	friend ostream& operator<<(ostream& output, const Matrix& matrix)
 	{
-		for(int h = 0; h < matrix.m_m; ++h)
+		for(int h = 0; h < matrix.m_size.m; ++h)
 		{
-			for(int w = 0; w < matrix.m_n; ++w)
+			for(int w = 0; w < matrix.m_size.n; ++w)
 			{
 				output << matrix.m_matrix[h][w] << " ";
 			}
@@ -31,9 +37,9 @@ public:
 	Matrix operator+(Matrix& addend)
 	{
 		Matrix augend = *this;
-		for(int h = 0; h < m_m; ++h)
+		for(int h = 0; h < m_size.m; ++h)
 		{
-			for(int w = 0; w < m_n; ++w)
+			for(int w = 0; w < m_size.n; ++w)
 			{
 				augend.m_matrix[h][w] += addend.m_matrix[h][w];
 			}
@@ -41,8 +47,10 @@ public:
 		return augend;
 	}
 
+	matrixSize getSize();
+
 private:
-	int m_m, m_n; // m x n Matrix
+	matrixSize m_size;
 	vector<vector<double>> m_matrix;
 	
 

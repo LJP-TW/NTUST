@@ -58,6 +58,44 @@ void showMatrix()
 	cout << endl << matrixs[index] << endl;
 }
 
+void addMatrix()
+{
+	int index1, index2;
+
+	// Input
+	cout << "Input Index1 : ";
+	cin >> index1;
+
+	if(index1 >= (int)matrixs.size())
+	{
+		cout << "Error : Out of Range" << endl;
+		return;
+	}
+
+	cout << "Input Index2 : ";
+	cin >> index2;
+
+	if(index2 >= (int)matrixs.size())
+	{
+		cout << "Error : Out of Range" << endl;
+		return;
+	}
+
+	// Check Size
+	matrixSize m1, m2;
+	m1 = matrixs[index1].getSize();
+	m2 = matrixs[index2].getSize();
+
+	if(m1.m == m2.m && m1.n == m2.n)
+	{
+		matrixs[index1] = matrixs[index1] + matrixs[index2];
+	}
+	else
+	{
+		cout << "Error : The size of two matrixs don't match" << endl;
+	}
+}
+
 int main()
 {
 	bool continueFlag = true;
@@ -84,6 +122,7 @@ int main()
 				}
 			case 3:
 				{
+					addMatrix();
 					break;
 				}
 			case 4:
