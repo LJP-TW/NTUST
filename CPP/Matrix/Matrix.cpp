@@ -1,5 +1,11 @@
 #include "Matrix.h"
 
+Matrix::Matrix()
+{
+	m_m = 0;
+	m_n = 0;
+}
+
 template<int m, int n>
 Matrix::Matrix(double element[m][n])
 {
