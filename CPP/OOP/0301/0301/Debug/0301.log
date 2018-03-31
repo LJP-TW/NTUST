@@ -1,0 +1,4 @@
+﻿  occurrencCounting.cpp
+d:\visual studio project\c++\ntust_hw\0301\0301\occurrenccounting.cpp(32): warning C4018: '<': signed/unsigned 不相符
+  0301.vcxproj -> D:\Visual Studio Project\C++\NTUST_HW\0301\Debug\0301.exe
+  0301.vcxproj -> D:\Visual Studio Project\C++\NTUST_HW\0301\Debug\0301.pdb (Partial PDB)

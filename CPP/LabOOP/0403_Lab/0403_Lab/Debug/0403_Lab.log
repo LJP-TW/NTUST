@@ -1,0 +1,6 @@
+﻿  RR.cpp
+d:\visual studio project\c++\ntust_hw\0403_lab\0403_lab\rr.cpp(87): warning C4018: '<': signed/unsigned 不相符
+d:\visual studio project\c++\ntust_hw\0403_lab\0403_lab\rr.cpp(145): warning C4018: '<': signed/unsigned 不相符
+d:\visual studio project\c++\ntust_hw\0403_lab\0403_lab\rr.cpp(210): warning C4018: '<': signed/unsigned 不相符
+  0403_Lab.vcxproj -> D:\Visual Studio Project\C++\NTUST_HW\0403_Lab\Debug\0403_Lab.exe
+  0403_Lab.vcxproj -> D:\Visual Studio Project\C++\NTUST_HW\0403_Lab\Debug\0403_Lab.pdb (Partial PDB)

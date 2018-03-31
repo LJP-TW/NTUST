@@ -1,0 +1,8 @@
+﻿  input-main1.cpp
+d:\visual studio project\c++\ntust_hw\0402\0402\fraction.h : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
+  Fraction.cpp
+d:\visual studio project\c++\ntust_hw\0402\0402\fraction.cpp : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
+d:\visual studio project\c++\ntust_hw\0402\0402\fraction.h : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
+  正在產生程式碼...
+  0402.vcxproj -> D:\Visual Studio Project\C++\NTUST_HW\0402\Debug\0402.exe
+  0402.vcxproj -> D:\Visual Studio Project\C++\NTUST_HW\0402\Debug\0402.pdb (Partial PDB)

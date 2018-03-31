@@ -1,0 +1,8 @@
+﻿  Source.cpp
+c:\users\user\source\repos\0402_lab\0402_lab\source.cpp(43): warning C4018: '<': signed/unsigned 不相符
+c:\users\user\source\repos\0402_lab\0402_lab\source.cpp(47): warning C4018: '<': signed/unsigned 不相符
+c:\users\user\source\repos\0402_lab\0402_lab\source.cpp(62): warning C4018: '<': signed/unsigned 不相符
+c:\users\user\source\repos\0402_lab\0402_lab\source.cpp(68): warning C4018: '<': signed/unsigned 不相符
+c:\users\user\source\repos\0402_lab\0402_lab\source.cpp(72): warning C4018: '<': signed/unsigned 不相符
+  0402_Lab.vcxproj -> C:\Users\user\source\repos\0402_Lab\Debug\0402_Lab.exe
+  0402_Lab.vcxproj -> C:\Users\user\source\repos\0402_Lab\Debug\0402_Lab.pdb (Partial PDB)
