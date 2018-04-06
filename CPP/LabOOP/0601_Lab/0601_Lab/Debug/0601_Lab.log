@@ -1,0 +1,5 @@
+﻿  main.cpp
+d:\git\ntust\cpp\laboop\0601_lab\0601_lab\main.cpp(36): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\cpp\laboop\0601_lab\0601_lab\main.cpp(49): warning C4018: '<': signed/unsigned 不相符
+  0601_Lab.vcxproj -> D:\Git\NTUST\CPP\LabOOP\0601_Lab\Debug\0601_Lab.exe
+  0601_Lab.vcxproj -> D:\Git\NTUST\CPP\LabOOP\0601_Lab\Debug\0601_Lab.pdb (Partial PDB)
