@@ -1,0 +1,91 @@
+#0
+When I open my eyes, all around is wholly black.
+It seems that I'm in a maze.
+I must find the exit.
+-Front #1-1
+-Back #DE
+
+#1-1
+There's a boy sleeping on the ground.
+-Wake him up #1-2-2
+-Ignore him #1-2-1
+
+#1-2-1
+There's a girl sleeping on the ground.
+I don't want to wake her up.
+-Ignore her #NE
+
+#1-2-2
+There's a girl sleeping on the ground.
+-Wake her up #2-1-2
+-Ignore her #2-1-1
+
+#2-1-1
+There's an intersection.
+Boy: I'm Whity. The exit is on the right.
+-Right #2-1-1-1
+-Left #BE2
+-Front #NE
+
+#2-1-1-1
+Thinking for a while, I still can't trust Whity.
+-Right #2-1-1-1
+-Left #BE2
+-Front #NE
+
+#2-1-2
+There's an intersection.
+Boy: I'm Whity. The exit is on the right.
+Girl: I'm Blacky. The exit is on the left.
+-Right #W1
+-Left #B1
+-Front #NE
+
+#W1
+There's another intersection.
+Whity: I'm sure that the exit is on the right.
+Blacky: Trust me. The exit is on the left.
+-Right #TE-W
+-Left #DE2
+-Front #GE
+
+#B1
+There's another intersection.
+Whity: I'm sure that the exit is on the right.
+Blacky: Trust me. The exit is on the left.
+-Right #DE2
+-Left #TE-B
+-Front #GE
+
+#TE-W
+Blacky disappeared on the next day.
+I can't find the way to exit, but it doesn't matter anymore.
+Whity and I will live a sweet life together forever.
+
+#TE-B
+Whity disappeared on the next day.
+I can't find the way to exit, but it doesn't matter anymore.
+Blacky and I will live a sweet life together forever.
+
+#GE
+Going front, we find the exit.
+I take Whity and Blacky home, and we live happily ever after.
+
+#NE
+Finding the way myself, I leave the maze alone.
+
+#BE
+Somehow, Whity and Blacky disappeared on the next day.
+Unable to find the path to exit, I'll be prisoned in the maze forever.
+
+#BE2
+Whity disappeared on the next day.
+Unable to find the path to exit, I'll be prisoned in the maze forever.
+
+#DE
+A huge stone falls.
+I'm dead.
+
+#DE2
+The night when I'm sleeping, something sharp thrust into my heart.
+I'm dead.
