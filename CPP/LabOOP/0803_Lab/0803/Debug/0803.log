@@ -1,0 +1,4 @@
+﻿  Solution.cpp
+c:\users\user\documents\visual studio 2015\projects\0803\0803\solution.cpp(20): warning C4018: '<': signed/unsigned 不相符
+  0803.vcxproj -> C:\Users\user\Documents\Visual Studio 2015\Projects\0803\Debug\0803.exe
+  0803.vcxproj -> C:\Users\user\Documents\Visual Studio 2015\Projects\0803\Debug\0803.pdb (Partial PDB)
