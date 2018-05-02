@@ -1,0 +1,9 @@
+﻿  FriendSet.cpp
+  正在產生程式碼...
+  正在編譯...
+  main.cpp
+d:\git\ntust\cpp\laboop\0901_lab\0901_lab\main.cpp(105): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\cpp\laboop\0901_lab\0901_lab\main.cpp(23): warning C4101: 'idx': 未參考的區域變數
+  正在產生程式碼...
+  0901_Lab.vcxproj -> D:\Git\NTUST\CPP\LabOOP\0901_Lab\Debug\0901_Lab.exe
+  0901_Lab.vcxproj -> D:\Git\NTUST\CPP\LabOOP\0901_Lab\Debug\0901_Lab.pdb (Partial PDB)

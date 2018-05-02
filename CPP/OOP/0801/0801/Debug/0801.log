@@ -1,0 +1,18 @@
+﻿  input-main1.cpp
+d:\git\ntust\cpp\oop\0801\0801\input-main1.cpp(40): warning C4018: '<': signed/unsigned 不相符
+  DesignPolynomialClass.cpp
+d:\git\ntust\cpp\oop\0801\0801\designpolynomialclass.cpp(21): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\cpp\oop\0801\0801\designpolynomialclass.cpp(32): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\cpp\oop\0801\0801\designpolynomialclass.cpp(54): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\cpp\oop\0801\0801\designpolynomialclass.cpp(76): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\cpp\oop\0801\0801\designpolynomialclass.cpp(92): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\cpp\oop\0801\0801\designpolynomialclass.cpp(105): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\cpp\oop\0801\0801\designpolynomialclass.cpp(121): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\cpp\oop\0801\0801\designpolynomialclass.cpp(147): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\cpp\oop\0801\0801\designpolynomialclass.cpp(149): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\cpp\oop\0801\0801\designpolynomialclass.cpp(161): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\cpp\oop\0801\0801\designpolynomialclass.cpp(181): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\cpp\oop\0801\0801\designpolynomialclass.cpp(186): warning C4018: '<': signed/unsigned 不相符
+  正在產生程式碼...
+  0801.vcxproj -> D:\Git\NTUST\CPP\OOP\0801\Debug\0801.exe
+  0801.vcxproj -> D:\Git\NTUST\CPP\OOP\0801\Debug\0801.pdb (Partial PDB)
