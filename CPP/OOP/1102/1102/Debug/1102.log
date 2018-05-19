@@ -1,0 +1,4 @@
+﻿  main.cpp
+d:\git\ntust\cpp\oop\1102\1102\main.cpp(5): warning C4244: '引數': 將 'time_t' 轉換為 'unsigned int'，由於類型不同，可能導致資料遺失
+  1102.vcxproj -> D:\Git\NTUST\CPP\OOP\1102\Debug\1102.exe
+  1102.vcxproj -> D:\Git\NTUST\CPP\OOP\1102\Debug\1102.pdb (Partial PDB)
