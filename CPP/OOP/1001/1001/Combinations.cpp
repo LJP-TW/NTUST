@@ -39,8 +39,21 @@ void PrintCombination(int *list, int n, int r)
 	// Fill number into globalInt
 	for (int i = 0; n - i >= r; ++i)
 	{
-		globalIntSize = nowPos + 1;
+		//globalIntSize = nowPos + 1;
 		globalInt[nowPos] = list[i];
 		PrintCombination(&list[i + 1], n - i - 1, r - 1);
+	}
+
+	// Resize 
+	--globalIntSize;
+	temp = globalInt;
+	globalInt = new int[globalIntSize];
+	for (int i = 0; i < globalIntSize; ++i)
+	{
+		globalInt[i] = temp[i];
+	}
+	if (temp != NULL)
+	{
+		delete[] temp;
 	}
 }

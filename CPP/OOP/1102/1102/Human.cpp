@@ -3,7 +3,6 @@
 // Last Update: 2018/5/19
 // Problem statement: Creatures
 #include "Human.h"
-#define getSpecies() "Human"
 
 Human::Human() : Creature()
 {
@@ -21,4 +20,9 @@ int Human::getDamage()
 		damage << " points!" << endl;
 
 	return damage;
+}
+
+string Human::getSpecies()
+{
+	return string("Human");
 }

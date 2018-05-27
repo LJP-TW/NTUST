@@ -25,7 +25,17 @@ public:
 	// inflicts in one round of combat
 	virtual int getDamage();
 
-protected:
+	virtual string getSpecies();
+
+	// Mutator
+	void setStrength(int strength);
+	void setHitpoints(int hitpoints);
+
+	// Accessor
+	int getStrength() const;
+	int getHitpoints() const;
+
+private:
 	int strength; // How much damage we can inflict
 	int hitpoints; // How much damage we can sustain
 

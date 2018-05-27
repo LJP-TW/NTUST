@@ -17,6 +17,8 @@ public:
 	// Returns amount of damage this creature
 	// inflicts in one round of combat
 	virtual int getDamage(string species);
+
+	virtual string getSpecies();
 };
 
 #include "Cyberdemon.h"

@@ -63,46 +63,37 @@ void readGameBoard()
 
 bool isValid(string words)
 {
-	int x;
-	int y;
-	bool foundFlag = false;
-
-	// Init GameBoard
-	for (y = 0; y < N; ++y)
-	{
-		for (x = 0; x < N; ++x)
-		{
-			gameBoard[y][x].used = false;
-		}
-	}
-
 	// Find initial point
-	for (y = 0; y < N; ++y)
+	for (int y = 0; y < N; ++y)
 	{
-		for (x = 0; x < N; ++x)
+		for (int x = 0; x < N; ++x)
 		{
 			if (gameBoard[y][x].alpha == words[0])
 			{
-				foundFlag = true;
-				break;
+				string tWords = words;
+
+				// Init GameBoard
+				for (int y = 0; y < N; ++y)
+				{
+					for (int x = 0; x < N; ++x)
+					{
+						gameBoard[y][x].used = false;
+					}
+				}
+
+				gameBoard[y][x].used = true;
+				tWords.erase(tWords.begin());
+
+				// Recursive
+				if (isValidRecursive(tWords, x, y))
+				{
+					return true;
+				}
 			}
 		}
-		if (foundFlag)
-		{
-			break;
-		}
 	}
 
-	if (foundFlag == false)
-	{
-		return false;
-	}
-
-	gameBoard[y][x].used = true;
-	words.erase(words.begin());
-
-	// Recursive
-	return isValidRecursive(words, x, y);
+	return false;
 }
 
 bool isValidRecursive(string words, int x, int y)

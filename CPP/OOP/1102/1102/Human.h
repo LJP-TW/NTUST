@@ -19,6 +19,8 @@ public:
 	// Returns amount of damage this creature
 	// inflicts in one round of combat
 	virtual int getDamage();
+
+	virtual string getSpecies();
 };
 
 #endif

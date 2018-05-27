@@ -21,3 +21,28 @@ int Creature::getDamage()
 	
 	return damage;
 }
+
+string Creature::getSpecies()
+{
+	return string("Unknown");
+}
+
+void Creature::setStrength(int strength)
+{
+	this->strength = strength;
+}
+
+void Creature::setHitpoints(int hitpoints)
+{
+	this->hitpoints = hitpoints;
+}
+
+int Creature::getStrength() const
+{
+	return strength;
+}
+
+int Creature::getHitpoints() const
+{
+	return hitpoints;
+}

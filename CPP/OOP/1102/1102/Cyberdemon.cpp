@@ -3,7 +3,6 @@
 // Last Update: 2018/5/19
 // Problem statement: Creatures
 #include "Cyberdemon.h"
-#define getSpecies() "Cyberdemon"
 
 Cyberdemon::Cyberdemon() : Demon()
 {
@@ -18,5 +17,10 @@ int Cyberdemon::getDamage()
 	int damage = Demon::getDamage(getSpecies());
 
 	return damage;
+}
+
+string Cyberdemon::getSpecies()
+{
+	return string("Cyberdemon");
 }
 

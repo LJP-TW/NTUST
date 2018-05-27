@@ -29,3 +29,8 @@ int Demon::getDamage(string species)
 
 	return damage;
 }
+
+string Demon::getSpecies()
+{
+	return string("Unknown");
+}

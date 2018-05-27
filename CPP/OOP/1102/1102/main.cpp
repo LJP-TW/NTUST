@@ -19,5 +19,11 @@ int main()
 	c.getDamage();
 	cout << endl;
 
+	Cyberdemon& creature1 = c;
+	creature1.getDamage();
+	cout << endl;
+
+	system("pause");
+
 	return 0;
 }

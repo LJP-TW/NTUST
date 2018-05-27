@@ -3,7 +3,6 @@
 // Last Update: 2018/5/19
 // Problem statement: Creatures
 #include "Elf.h"
-#define getSpecies() "Elf"
 
 Elf::Elf() : Creature()
 {
@@ -29,4 +28,9 @@ int Elf::getDamage()
 	}
 
 	return damage;
+}
+
+string Elf::getSpecies()
+{
+	return string("Elf");
 }
