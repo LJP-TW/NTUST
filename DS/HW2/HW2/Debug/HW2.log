@@ -1,0 +1,8 @@
+﻿  Source.cpp
+d:\git\ntust\ds\hw2\hw2\source.cpp(40): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\ds\hw2\hw2\source.cpp(56): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\ds\hw2\hw2\source.cpp(141): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\ds\hw2\hw2\source.cpp(155): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\ds\hw2\hw2\source.cpp(183): warning C4018: '<': signed/unsigned 不相符
+  HW2.vcxproj -> D:\Git\NTUST\DS\HW2\Debug\HW2.exe
+  HW2.vcxproj -> D:\Git\NTUST\DS\HW2\Debug\HW2.pdb (Partial PDB)
