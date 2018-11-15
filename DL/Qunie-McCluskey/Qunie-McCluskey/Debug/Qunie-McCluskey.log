@@ -1,36 +1,36 @@
 ﻿  main.cpp
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(92): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(98): warning C4018: '<=': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(103): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(106): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(118): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(120): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(122): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(141): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(173): warning C4244: '=': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(121): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(126): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(130): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(165): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(169): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(197): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(203): warning C4018: '<=': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(208): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(211): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(223): warning C4018: '<': signed/unsigned 不相符
 d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(225): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(283): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(292): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(295): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(227): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(246): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(278): warning C4244: '=': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
 d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(330): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(361): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(385): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(405): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(444): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(448): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(451): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(476): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(478): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(480): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(491): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(505): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(522): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(525): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(527): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(531): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(388): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(397): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(400): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(435): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(466): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(490): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(510): warning C4018: '<': signed/unsigned 不相符
 d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(549): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(551): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(572): warning C4018: '<': signed/unsigned 不相符
-d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(580): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(553): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(556): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(581): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(583): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(585): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(610): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(613): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(615): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(629): warning C4018: '<': signed/unsigned 不相符
+d:\git\ntust\dl\qunie-mccluskey\qunie-mccluskey\main.cpp(644): warning C4018: '<': signed/unsigned 不相符
   Qunie-McCluskey.vcxproj -> D:\Git\NTUST\DL\Qunie-McCluskey\Debug\Qunie-McCluskey.exe
   Qunie-McCluskey.vcxproj -> D:\Git\NTUST\DL\Qunie-McCluskey\Debug\Qunie-McCluskey.pdb (Partial PDB)

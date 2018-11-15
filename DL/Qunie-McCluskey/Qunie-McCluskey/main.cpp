@@ -2,14 +2,16 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
+#include <set>
 #include <string>
 #include <cmath>
 #include <cstdlib>
+#include <algorithm>
 
 using namespace std;
 
 vector<string> G_OF; // Global Origin (Boolean) Function
-vector<string> G_F; // Global (Minimized Boolean) Function
+vector<string> G_F; // Global Temp Function
 vector<string> G_D; // Global Don't care
 vector<string> G_PI; // Prime Implicant
 vector<string> G_Minterm; // Minterm of G_OF
@@ -58,11 +60,24 @@ vector<int> stringToInts(string);
 string intToString(int i, int digit);
 
 /*
+	EPI must be minterm.
+	* 會修改到 G_PI, G_OF
+	找到 EPI 的會丟到 G_Minterm
+	並將此 EPI 覆蓋到的項從 G_OF 移除
+	並將其從 G_PI 刪除
+*/
+void selectEPI();
+
+/*
 	Implement https://en.wikipedia.org/wiki/Petrick%27s_method
-	Input: G_PI
-	output: G_Minterm
+	要涵蓋的是 G_OF，從 G_PI 找需要的推進 G_Minterm
 */
 void petrick();
+
+/*
+	挑最小項
+*/
+void selectMinterms();
 
 int main(int argc, char *argv[])
 {
@@ -75,11 +90,101 @@ int main(int argc, char *argv[])
 	} while (G_F.size() > 0);
 
 	// 選擇哪些Terms
-	// Petrick's method
-	petrick();
+	selectMinterms();
 
 	// Output
 	output(argv[2]);
+}
+
+void selectMinterms()
+{
+	vector<string> Temp = G_OF;
+
+	// 先選 EPI
+	selectEPI();
+
+	// 選完還是有沒選到的 再用 Petrick's method
+	if (G_OF.size() > 0)
+	{
+		petrick();
+	}
+	
+
+	G_OF = Temp;
+}
+
+void selectEPI() 
+{
+	// 哪些 PI 是 EPI
+	set<int> EPIs;
+
+	for (int i = 0; i < G_OF.size(); ++i)
+	{
+		// 紀錄哪個 PI 為 EPI
+		int EPI = -1;
+		
+		for (int j = 0; j < G_PI.size(); ++j)
+		{
+			bool termInPI = true;
+
+			for (int k = 0; k < G_PI[j].size(); ++k)
+			{
+				if (G_PI[j][k] != '-' && G_PI[j][k] != G_OF[i][k])
+				{
+					termInPI = false;
+					break;
+				}
+			}
+
+			if (termInPI)
+			{
+				if (EPI != -1)
+				{
+					// 此項沒有只被一個 PI 包住
+					EPI = -1;
+					break;
+				}
+
+				EPI = j;
+			}
+		}
+
+		if (EPI != -1)
+		{
+			// G_PI[EPI] 為 EPI
+			EPIs.insert(EPI);
+		}
+	}
+
+	for (auto i = EPIs.rbegin(); i != EPIs.rend(); i++)
+	{
+		// 找到 EPI 的會丟到 G_Minterm
+		G_Minterm.push_back(G_PI[*i]);
+
+		// 並將此 EPI 覆蓋到的項從 G_OF 移除
+		for (int j = 0; j < G_OF.size(); ++j)
+		{
+			bool termInEPI = true;
+
+			for (int k = 0; k < G_OF[j].size(); ++k)
+			{
+				if (G_PI[*i][k] != '-' && G_PI[*i][k] != G_OF[j][k])
+				{
+					termInEPI = false;
+					break;
+				}
+			}
+
+			if (termInEPI)
+			{
+				G_OF.erase(G_OF.begin() + j);
+				--j;
+			}
+		}
+
+		// 並將其從 G_PI 刪除
+		G_PI.erase(G_PI.begin() + *i);
+	}
 }
 
 vector<string> reduce(vector<string> F)
@@ -427,23 +532,23 @@ void petrick()
 {
 	/*
 	BC :
-		class: vector<int>
+		class: set<int>
 		data : 1, 2
 	AD + BC:
-		class: vector<vector<int>>
-		data : vector<int>, vector<int>
+		class: vector<set<int>>
+		data : set<int>, set<int>
 	(AD + BC)(E + F):
-		class: vector<vector<vector<int>>>
-		data : vector<vector<int>>, vector<vector<int>>
+		class: vector<vector<set<int>>>
+		data : vector<set<int>>, vector<set<int>>
 	*/
-	vector<vector<vector<int>>> T;
+	vector<vector<set<int>>> T;
 	bool notSimplest = true;
 	int min;
 
 	// Initial T
 	for (int i = 0; i < G_OF.size(); ++i)
 	{
-		T.push_back(vector<vector<int>>());
+		T.push_back(vector<set<int>>());
 
 		for (int j = 0; j < G_PI.size(); ++j)
 		{
@@ -459,8 +564,8 @@ void petrick()
 
 			if (termInPI)
 			{
-				T[T.size() - 1].push_back(vector<int>());
-				T[T.size() - 1][T[T.size() - 1].size() - 1].push_back(j);
+				T[T.size() - 1].push_back(set<int>());
+				T[T.size() - 1][T[T.size() - 1].size() - 1].insert(j);
 			}
 		}
 	}
@@ -468,7 +573,7 @@ void petrick()
 	/*
 	Simplify T with the following equivalences until T cannot be simplified:
 		X+XY = X
-		XX = X
+		XX = X (By using set, this situation can be prevented)
 	*/
 	while (notSimplest)
 	{
@@ -486,27 +591,12 @@ void petrick()
 						T[i][j1] = temp;
 					}
 
-					bool contained = true;
-
-					for (int k = 0; k < T[i][j0].size(); ++k)
-					{
-						if (std::find(T[i][j1].begin(), T[i][j1].end(), T[i][j0][k]) == T[i][j1].end())
-						{
-							contained = false;
-							break;
-						}
-					}
-
-					if (contained)
+					if (includes(T[i][j1].begin(), T[i][j1].end(), T[i][j0].begin(), T[i][j0].end()))
 					{
 						// Match equivalences:
 						// T[i][j0] + T[i][j0] * T[i][j1] = T[i][j0]
 						// Delete T[i][j1]
-						for (int m = j1 + 1; m < T[i].size(); ++m)
-						{
-							T[i][m - 1] = T[i][m];
-						}
-						T[i].pop_back();
+						T[i].erase(T[i].begin() + j1);
 						--j1;
 					}
 				}
@@ -516,25 +606,17 @@ void petrick()
 		// distributive law, preventing situation that making XX e.g. (X + ...)(X + ...) = XX + ...
 		if (T.size() > 1)
 		{
-			bool isEven;
-
 			// T[i - 1] = T[i - 1] * T[i]
 			for (int i = 1; i < T.size(); i += 2)
 			{
-				vector<vector<int>> temp;
+				vector<set<int>> temp;
 				for (int j0 = 0; j0 < T[i - 1].size(); ++j0)
 				{
 					for (int j1 = 0; j1 < T[i].size(); ++j1)
 					{
-						vector<int> tempTerm = T[i - 1][j0];
+						set<int> tempTerm = T[i - 1][j0];
 
-						for (int k = 0; k < T[i][j1].size(); ++k)
-						{
-							if (std::find(tempTerm.begin(), tempTerm.end(), T[i][j1][k]) == tempTerm.end())
-							{
-								tempTerm.push_back(T[i][j1][k]);
-							}
-						}
+						tempTerm.insert(T[i][j1].begin(), T[i][j1].end());
 
 						temp.push_back(tempTerm);
 					}
@@ -543,20 +625,10 @@ void petrick()
 				T[i - 1] = temp;
 			}
 
-			isEven = (T.size() % 2) ? false : true;
-
 			// Delete T[i]
-			for (int i = 2; i < T.size(); ++i)
+			for (int i = 1; i < T.size(); ++i)
 			{
-				for (int j = i; j < T.size(); ++j)
-				{
-					T[j - 1] = T[j];
-				}
-				T.pop_back();
-			}
-			if (isEven)
-			{
-				T.pop_back();
+				T.erase(T.begin() + i);
 			}
 		}
 		else
@@ -566,7 +638,7 @@ void petrick()
 	}
 
 	/*
-		挑項數最少的輸出
+		挑項數最少的Term
 	*/
 	min = 0;
 	for (int i = 0; i < T[0].size(); ++i)
@@ -577,8 +649,11 @@ void petrick()
 		}
 	}
 
-	for (int i = 0; i < T[0][min].size(); ++i)
+	/*
+		將此Term存到G_Minterm
+	*/
+	for (int const& i : T[0][min])
 	{
-		G_Minterm.push_back(G_PI[T[0][min][i]]);
+		G_Minterm.push_back(G_PI[i]);
 	}
 }
