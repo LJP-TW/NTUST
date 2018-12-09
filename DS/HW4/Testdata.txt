@@ -1,0 +1,22 @@
+2 1 10 11 8 9 6 7 5 4 3
+d 3
+d 6
+d 8
+d 2
+m 5
+4
+m 6
+5
+m 10
+5
+m 11
+7
+i 2
+m 3
+2
+i 2
+element already existed.
+i 8
+d 10
+m 27
+8
