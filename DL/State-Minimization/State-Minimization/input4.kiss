@@ -1,0 +1,19 @@
+.start_kiss
+.i 1
+.o 3
+.p 12
+.s 6
+.r SA
+0 SA SC 111
+1 SA SA 001
+0 SB SA 100
+1 SB SB 101
+0 SC SD 110
+1 SC SD 000
+0 SD SE 000
+1 SD SD 010
+0 SE SA 010
+1 SE SC 101
+0 SF SB 000
+1 SF SB 110
+.end_kiss
