@@ -1,6 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <stdlib.h>
 
 // Subarray Info
 typedef struct {
@@ -12,14 +11,12 @@ typedef struct {
 int main()
 {
 	int n; // How many numbers
-	long long *price_diff = malloc(sizeof(long long) * 100000); // Storaging raw data
-	long long *price = malloc(sizeof(long long) * 100001); // price_diff[i] = price[i + 1] - price[i]
 
 	while (scanf("%d", &n) != EOF)
 	{
 		// Initial
-		int segment_min_index, segment_max_index;
-		long long temp_sum;
+		int segment_min_index = 0, segment_max_index = 0;
+		long long temp_sum, raw_data, now_price = 0, segment_min_price = 0, segment_max_price = 0;
 		SI best_result;
 
 		best_result.sum = 0x8000000000000000;
@@ -27,42 +24,36 @@ int main()
 		// Input
 		for (int i = 0; i < n; ++i)
 		{
-			scanf("%lld", &price_diff[i]);
-		}
+			scanf("%lld", &raw_data);
 
-		// Processing
-		// Constructing price[0 ... n + 1]
-		// When encounting a new low, calculating the best profit before the new low
-		segment_max_index = segment_min_index = 0;
-		price[0] = 0;
-		for (int i = 1; i <= n; ++i)
-		{
-			price[i] = price_diff[i - 1] + price[i - 1];
+			// Processing
+			// Treating raw_data as 'price diff of every day'
+			// Computing price of every day.
+			// When encounting a new low price, calculating the best profit before the day
+	
+			now_price += raw_data;
 
-			if (price[i] > price[segment_max_index])
+			if (now_price > segment_max_price)
 			{
 				segment_max_index = i;
+				segment_max_price = now_price;
 			}
 
-			if (price[i] < price[segment_min_index] || i == n)
+			if (now_price < segment_min_price || i == n - 1)
 			{
-				if ((temp_sum = price[segment_max_index] - price[segment_min_index]) > best_result.sum)
+				if ((temp_sum = segment_max_price - segment_min_price) > best_result.sum)
 				{
 					best_result.left = segment_min_index;
-					best_result.right = segment_max_index - 1;
+					best_result.right = segment_max_index;
 					best_result.sum = temp_sum;
 				}
-
-				segment_max_index = segment_min_index = i;
+								
+				segment_max_index = segment_min_index = i + 1;
+				segment_max_price = segment_min_price = now_price;
 			}
 		}
-		
+
 		// Output
 		printf("%d %d %lld\n", best_result.left, best_result.right, best_result.sum);
 	}
-
-	free(price_diff);
-	free(price);
-
-	return 0;
 }
